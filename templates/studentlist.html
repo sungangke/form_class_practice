@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>studentlist</title>
+</head>
+<body>
+    <h2>学生列表</h2>
+    <hr>
+    <a href="/add_stu/">添加学生</a>
+    <ul>
+        {% for stu in stu_list %}
+            <li>{{ stu.sname }}-{{ stu.age }}-{{ stu.email }}-{{ stu.cls_id }}<a href="/edit_stu/{{ stu.id }}/">编辑</a></li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>

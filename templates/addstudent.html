@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/add_stu/" method="post" novalidate>
+    {% csrf_token %}
+    <h2>添加学生</h2>
+    <hr>
+    <p>{{ obj.sname }}{{ obj.errors.sname.0 }}</p>
+    <p>{{ obj.email }}{{ obj.errors.email.0 }}</p>
+    <p>{{ obj.age }}{{ obj.errors.age.0 }}</p>
+    <p>{{ obj.cls_id }}{{ obj.errors.cls_id.0 }}</p>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>班级列表</h2>
+<hr>
+<span><a href="/add_class/">添加班级</a></span>
+{#<form action="/class_list/" method="post">#}
+{#    {% csrf_token %}#}
+    <ul>
+        {% for cls_list in obj %}
+            <li>{{ cls_list.title }}<a href="/edit_class/{{ cls_list.id }}/">编辑</a></li>
+        {% endfor %}
+    </ul>
+{#</form>#}
+</body>
+</html>

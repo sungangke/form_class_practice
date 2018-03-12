@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加老师</title>
+</head>
+<body>
+
+<form action="/add_teacher/" method="post">
+    {% csrf_token %}
+    <p>姓名：{{ obj.tname }}</p>
+    <p>任教班级：{{ obj.xx }}</p>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

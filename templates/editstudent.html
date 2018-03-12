@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>编辑学生信息</h2>
+<hr>
+<form action="/edit_stu/{{ nid }}" method="post">
+    {% csrf_token %}
+    <p>{{ obj.sname }}</p>
+    <p>{{ obj.email }}</p>
+    <p>{{ obj.age }}</p>
+    <p>{{ obj.cls_id }}</p>
+    <input type="submit" value="提交">
+</form>
+
+</body>
+</html>
